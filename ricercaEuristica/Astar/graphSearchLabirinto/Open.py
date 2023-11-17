@@ -13,6 +13,9 @@ class Open:
         elif self.tail.f <= newElem.f:
             self.tail.next = newElem
             self.tail = newElem
+        elif self.head.f >= newElem.f:
+            newElem.next = self.head
+            self.head = newElem
         else:
             elem = self.head
             while elem.next != None:
@@ -24,8 +27,11 @@ class Open:
             elem = elem.next
 
     # fst elem
-    def estract(self):
+    def extract(self):
         elem = self.head
         self.head = elem.next
         elem.next = None
         return elem
+
+    def isEmpty(self):
+        return self.head == None

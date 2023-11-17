@@ -13,3 +13,13 @@ class Close:
         else:
             self.tail.next = newElem
             self.tail = newElem
+
+    def isInClose(self, elem):
+        e = self.head
+        while e != None:
+            if e.node.position == elem.node.position:
+                return True
+            else:
+                e = e.next
+
+        return False

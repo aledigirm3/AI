@@ -20,8 +20,12 @@ class Node:
     def getNeighbors(self):
         return labyrinth.labyrinth[self.position]
 
+    # goal state is static
+    def checkGoalState(self):
+        return self.position == (1, 1)
+
     def printPath(self):
         if self.parent != None:
-            self.parent.printPath(self.parent)
+            self.parent.printPath()
 
         print("->" + str(self.position))
