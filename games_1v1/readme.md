@@ -1,0 +1,1 @@
+Algorithms made using min-max method
