@@ -1,4 +1,4 @@
-import numpy as np
+#import numpy as np
 
 
 class Game:
@@ -62,7 +62,7 @@ class Game:
         # -1 -> lost
         # 0 -> tie
         # 1 -> won
-        maxv = -np.inf
+        maxv = -2
         px = None
         py = None
 
@@ -93,7 +93,7 @@ class Game:
         # -1 -> won
         # 0 -> tie
         # 1 -> lost
-        minv = np.inf
+        minv = 2
         px = None
         py = None
 
